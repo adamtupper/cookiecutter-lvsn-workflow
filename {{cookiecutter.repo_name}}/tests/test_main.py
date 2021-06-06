@@ -1,7 +1,6 @@
-import pytest
+import pytest  # noqa: F401
 
 
 def test_dummy():
-    """A dummy test case.
-    """
+    """A dummy test case."""
     pass
