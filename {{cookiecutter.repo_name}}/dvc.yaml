@@ -1,0 +1,19 @@
+stages:
+  main:
+    cmd: >-
+      python src/main.py
+      --no-cuda
+      --dry-run
+      --log-interval 10
+      --save-model
+    deps:
+      - src/main.py
+    params:
+      - train.batch_size
+      - train.test_batch_size
+      - train.epochs
+      - train.lr
+      - train.gamma
+      - train.seed
+    outs:
+      - models/model.pt
