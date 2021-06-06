@@ -22,9 +22,13 @@ python src/main.py --save-model --dry-run
 
 ## MNIST Example with DVC
 
-Projects build using this template are configured to use DVC to run and track experiments (using DVC pipelines). A modified version of the [PyTorch MNIST example](https://github.com/pytorch/examples/blob/master/mnist/main.py) (see `main.py`) is included to demonstrate how to use DVC. The pipeline is defined in `dvc.yaml` and the hyperparameters for each pipeline stage are defined in `params.yaml`.
+Projects build using this template are configured to use DVC to run and track experiments (using DVC pipelines). A modified version of the [PyTorch MNIST example](https://github.com/pytorch/examples/blob/master/mnist/main.py) (see `main.py`) is included to demonstrate how to use DVC. The pipeline is defined in `dvc.yaml` and the hyperparameters for each pipeline stage are defined in `params.yaml`. The pipeline can be run using
 
-### Syncing Git and DVC
+```shell
+dvc repro
+```
+
+## Syncing Git and DVC
 
 Each time you would like to push some artifacts or data to the DVC remote, commit all the source and metadata files to Git and run
 
@@ -42,7 +46,7 @@ afterwards to pull the artifacts associated with the latest commit.
 
 ## Deployment
 
-To deploy the project an LVSN server, you can build the Docker image using
+To deploy the project on an LVSN server, you can build the Docker image using
 
 ```shell
 docker build -t "my-image:dev" .
@@ -54,7 +58,7 @@ and run the main experiment script using
 docker run --rm --gpus all my-image:dev main.py --save-model --dry-run
 ```
 
-Develop your project using the VS Code with the Remote - Containers extension, should prevent any surprises when deploying the container.
+Developing your project as described above should prevent any surprises when deploying the container.
 
 ## Contributing
 
