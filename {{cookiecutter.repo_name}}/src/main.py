@@ -117,6 +117,7 @@ def main():
     torch.manual_seed(params["seed"])
 
     device = torch.device("cuda" if use_cuda else "cpu")
+    print(f"Device: {device}")
 
     train_kwargs = {"batch_size": params["batch_size"]}
     test_kwargs = {"batch_size": params["test_batch_size"]}
