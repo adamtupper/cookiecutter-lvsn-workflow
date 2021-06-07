@@ -59,7 +59,7 @@ docker build -t "my-image:dev" .
 and run the main experiment script using
 
 ```shell
-docker run --rm --gpus all my-image:dev src/main.py --save-model --dry-run
+docker run --rm --gpus all my-image:dev python src/main.py --save-model --dry-run
 ```
 
 Developing your project as described above should prevent any surprises when deploying the container.
