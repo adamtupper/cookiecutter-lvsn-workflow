@@ -14,9 +14,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Fix `docker run` command for executing deployed experiments in READMEs.
-- Fix DVC checkpoints, data, models, and metrics directories not being automatically created.
 - Change to official PyTorch docker image.
+
+### Fixed
+
+- `docker run` command in the deployment sections of the READMEs.
+- DVC checkpoints, data, models, and metrics directories not being automatically created.
 
 ## [1.0.0] - 2021-06-06
 
