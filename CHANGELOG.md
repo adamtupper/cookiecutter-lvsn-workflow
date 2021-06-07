@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Requirements to README.
 
+### Changed
+
+- Fixed `docker run` command for executing deployed experiments in README.
+
 ## [1.0.0] - 2021-06-06
 
 ### Added
