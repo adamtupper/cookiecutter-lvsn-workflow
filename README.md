@@ -7,6 +7,10 @@ A [Cookiecutter](https://github.com/cookiecutter/cookiecutter) template for my L
 Once you have Cookiecutter installed, you can setup a local project using this template by running
 
 ```shell
+# Install dependencies
+pip install cookiecutter dvc pre-commit
+
+# Run Cookiecutter
 cookiecutter https://github.com/adamtupper/cookiecutter-lvsn-workflow.git
 ```
 
