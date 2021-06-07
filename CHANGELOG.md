@@ -13,7 +13,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Fixed `docker run` command for executing deployed experiments in READMEs.
+- Fix `docker run` command for executing deployed experiments in READMEs.
+- Change to official PyTorch docker image.
 
 ## [1.0.0] - 2021-06-06
 
