@@ -7,6 +7,10 @@ A [Cookiecutter](https://github.com/cookiecutter/cookiecutter) template for my L
 Once you have Cookiecutter installed, you can setup a local project using this template by running
 
 ```shell
+# Install dependencies
+pip install cookiecutter dvc pre-commit
+
+# Run Cookiecutter
 cookiecutter https://github.com/adamtupper/cookiecutter-lvsn-workflow.git
 ```
 
@@ -55,7 +59,7 @@ docker build -t "my-image:dev" .
 and run the main experiment script using
 
 ```shell
-docker run --rm --gpus all my-image:dev main.py --save-model --dry-run
+docker run --rm --gpus all my-image:dev python src/main.py --save-model --dry-run
 ```
 
 Developing your project as described above should prevent any surprises when deploying the container.

@@ -1,3 +1,4 @@
+import os
 import subprocess
 
 
@@ -10,6 +11,12 @@ subprocess.call(['dvc', 'remote', 'default', '{{cookiecutter.dvc_remote}}'])
 
 # Setup pre-commit
 subprocess.call(['pre-commit', 'install'])
+
+# Create empty directories for data, models, etc.
+os.mkdir('checkpoints')
+os.mkdir('data')
+os.mkdir('metrics')
+os.mkdir('models')
 
 # Commit files
 subprocess.call(['git', 'add', '*'])
