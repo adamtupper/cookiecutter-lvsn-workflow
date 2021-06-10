@@ -7,6 +7,7 @@ RUN mkdir -p /work/
 COPY ./ /work/
 
 # Install requirements
+RUN apt update && apt install -y git
 RUN pip install --ignore-installed -r /work/requirements.txt
 
 # Set the working directory
