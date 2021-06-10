@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.2] - 2021.06.10
+
+### Fixed
+
+- Launch containers with GPUs and more shared memory when launching a container development environment.
+- Install Git in the image.
+
 ## [1.0.1] - 2021.06.09
 
 ### Added
