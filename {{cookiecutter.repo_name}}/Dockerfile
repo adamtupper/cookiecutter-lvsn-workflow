@@ -12,3 +12,6 @@ RUN pip install --ignore-installed -r /work/requirements.txt
 
 # Set the working directory
 WORKDIR /work/
+
+# Setup pre-commit hooks
+RUN pre-commit install
