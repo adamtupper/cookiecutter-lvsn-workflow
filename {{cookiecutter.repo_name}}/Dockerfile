@@ -19,7 +19,7 @@ COPY --chown={{cookiecutter.uid}}:{{cookiecutter.gid}} ./ /home/docker/workspace
 # Install requirements
 RUN sudo apt-get update && \
     sudo apt-get install -y git python3 python3-pip
-RUN pip install --ignore-installed -r /work/requirements.txt
+RUN pip install --ignore-installed -r /home/docker/workspace/requirements.txt
 
 # Set the working directory
 WORKDIR /home/docker/workspace/
