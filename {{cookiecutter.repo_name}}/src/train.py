@@ -132,9 +132,7 @@ def main():
     dataset1 = datasets.MNIST(
         "artifacts/data/mnist", train=True, download=True, transform=transform
     )
-    dataset2 = datasets.MNIST(
-        "artifacts/data/mnist", train=False, transform=transform
-    )
+    dataset2 = datasets.MNIST("artifacts/data/mnist", train=False, transform=transform)
     train_loader = torch.utils.data.DataLoader(dataset1, **train_kwargs)
     test_loader = torch.utils.data.DataLoader(dataset2, **test_kwargs)
 
