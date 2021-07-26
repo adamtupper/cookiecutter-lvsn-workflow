@@ -4,7 +4,7 @@ stages:
       python3 src/train.py
       --no-cuda
       --dry-run
-      --log-interval 1
+      --log-interval 10
       --save-model
     deps:
       - src/train.py
@@ -16,4 +16,4 @@ stages:
       - train.gamma
       - train.seed
     outs:
-      - dvcstore/models/model.pt
+      - {{cookiecutter.dvc_store}}/models/model.pt

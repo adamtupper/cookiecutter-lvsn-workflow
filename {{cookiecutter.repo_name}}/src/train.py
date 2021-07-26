@@ -130,9 +130,9 @@ def main():
         [transforms.ToTensor(), transforms.Normalize((0.1307,), (0.3081,))]
     )
     dataset1 = datasets.MNIST(
-        "artifacts/data/mnist", train=True, download=True, transform=transform
+        "{{cookiecutter.dvc_store}}/data/mnist", train=True, download=True, transform=transform
     )
-    dataset2 = datasets.MNIST("artifacts/data/mnist", train=False, transform=transform)
+    dataset2 = datasets.MNIST("{{cookiecutter.dvc_store}}/data/mnist", train=False, transform=transform)
     train_loader = torch.utils.data.DataLoader(dataset1, **train_kwargs)
     test_loader = torch.utils.data.DataLoader(dataset2, **test_kwargs)
 
@@ -146,7 +146,7 @@ def main():
         scheduler.step()
 
     if args.save_model:
-        torch.save(model.state_dict(), "artifacts/models/model.pt")
+        torch.save(model.state_dict(), "{{cookiecutter.dvc_store}}/models/model.pt")
 
 
 if __name__ == "__main__":
