@@ -22,12 +22,12 @@ run:			## Run the project inside a Docker container (use `make run gpus=0,1` to 
 	docker run --rm --gpus all --ipc=host \
 		-e NVIDIA_VISIBLE_DEVICES=$(gpus) \
 		-v {{cookiecutter.dvc_store}}:/home/docker/workspace/artifacts \
-		self-distillation:latest \
+		${LATEST} \
 		bash src/train.sh
 
 test:			## Runs the tests inside a Docker container (use `make run gpus=0,1` to specify GPU visibility).
 	docker run --rm --gpus all --ipc=host \
 		-e NVIDIA_VISIBLE_DEVICES=$(gpus) \
 		-v {{cookiecutter.dvc_store}}:/home/docker/workspace/artifacts \
-		self-distillation:latest \
+		${LATEST} \
 		pytest tests/
