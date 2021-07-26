@@ -7,7 +7,7 @@ subprocess.call(['git', 'init'])
 
 # Initialise DVC
 subprocess.call(['dvc', 'init'])
-subprocess.call(['ln', '-s', '{{cookiecutter.dvc_store}}', './artifacts'])
+subprocess.call(['dvc', 'cache', 'dir', '{{cookiecutter.dvc_cache}}'])
 
 if '{{cookiecutter.dvc_remote}}':
     # Specify DVC Remote
