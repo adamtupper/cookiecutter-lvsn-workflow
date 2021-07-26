@@ -7,16 +7,20 @@ subprocess.call(['git', 'init'])
 
 # Initialise DVC
 subprocess.call(['dvc', 'init'])
-subprocess.call(['dvc', 'remote', 'default', '{{cookiecutter.dvc_remote}}'])
+subprocess.call(['ln', '-s', '{{cookiecutter.dvc_store}}', './artifacts'])
+
+if '{{cookiecutter.dvc_remote}}':
+    # Specify DVC Remote
+    subprocess.call(['dvc', 'remote', 'default', '{{cookiecutter.dvc_remote}}'])
 
 # Setup pre-commit
 subprocess.call(['pre-commit', 'install'])
 
 # Create empty directories for data, models, etc.
-os.mkdir('checkpoints')
-os.mkdir('data')
-os.mkdir('metrics')
-os.mkdir('models')
+os.mkdir('artifacts/checkpoints')
+os.mkdir('artifacts/data')
+os.mkdir('artifacts/metrics')
+os.mkdir('artifacts/models')
 
 # Commit files
 subprocess.call(['git', 'add', '*'])

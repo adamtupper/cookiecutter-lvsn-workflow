@@ -4,6 +4,7 @@
     "email": "",
     "year": "2021",
     "short_description": "A short description goes here...",
+    "dvc_store": "",
     "dvc_remote": "",
     "uid": "Find this using `id -u $USER`",
     "gid": "Find this using `id -g $USER`"
