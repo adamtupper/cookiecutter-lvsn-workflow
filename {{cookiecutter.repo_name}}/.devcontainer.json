@@ -2,5 +2,6 @@
     "build": { "dockerfile": "Dockerfile" },
     "containerUser": "docker",
     "workspaceFolder": "/home/docker/vscode-workspace",
-    "runArgs": ["--gpus=all", "--ipc=host"]
+    "runArgs": ["--gpus=all", "--ipc=host"],
+    "initializeCommand": ["ln", "-s", "{{cookiecutter.dvc_store}}", "artifacts"]
 }
