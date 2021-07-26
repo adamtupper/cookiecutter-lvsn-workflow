@@ -1,4 +1,6 @@
 {
     "build": { "dockerfile": "Dockerfile" },
-    "runArgs": ["--gpus=all", "--shm-size=1g"]
+    "containerUser": "docker",
+    "workspaceFolder": "/home/docker/vscode-workspace",
+    "runArgs": ["--gpus=all", "--ipc=host"]
 }
