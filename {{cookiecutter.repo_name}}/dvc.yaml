@@ -1,13 +1,13 @@
 stages:
   main:
     cmd: >-
-      python src/main.py
+      python3 src/train.py
       --no-cuda
       --dry-run
       --log-interval 10
       --save-model
     deps:
-      - src/main.py
+      - src/train.py
     params:
       - train.batch_size
       - train.test_batch_size
@@ -16,4 +16,4 @@ stages:
       - train.gamma
       - train.seed
     outs:
-      - models/model.pt
+      - {{cookiecutter.dvc_store}}/models/model.pt
